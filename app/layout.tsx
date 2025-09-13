@@ -2,7 +2,7 @@ import "./globals.css";
 import Link from "next/link";
 
 export const metadata = {
-    title: "Burak Orkmaz Blog",
+    title: "Burak Korkmaz",
     description: "Personal blog built with Next.js and MongoDB",
 };
 
@@ -32,8 +32,8 @@ export default function RootLayout({
                     <Link href="/about" className="hover:text-accent uppercase">
                         About
                     </Link>
-                    <Link href="/contact" className="hover:text-accent uppercase">
-                        Contact
+                    <Link href="/gallery" className="hover:text-accent uppercase">
+                        Gallery
                     </Link>
                 </div>
             </div>
