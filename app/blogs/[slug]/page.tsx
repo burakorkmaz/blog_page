@@ -10,16 +10,14 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
     const post = (await db.collection("posts").findOne({ slug })) as BlogPost | null;
 
     if (!post) return notFound();
-
     return (
-        <article className="max-w-3xl mx-auto py-12 px-6 prose prose-invert">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
+        <div className="max-w-3xl mx-auto py-12 px-6">
             <img src={post.image} alt={post.title} className="w-full rounded-md mb-6" />
             <h1 className="text-4xl font-serif font-extrabold mb-4">{post.title}</h1>
-            <p className="text-sm text-textSecondary mb-8">
+            <p className="text-xl text-textSecondary mb-8">
                 {new Date(post.createdAt).toLocaleDateString()}
             </p>
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
-        </article>
+        </div>
     );
 }
