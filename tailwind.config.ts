@@ -15,6 +15,10 @@ const config: Config = {
                 border: "#444444", // dark gray
                 accent: "#888888", // soft gray
             },
+            fontFamily: {
+                sans: ["var(--font-inter)", "sans-serif"],   // Inter for body
+                serif: ["var(--font-playfair)", "serif"],    // Playfair for titles
+            }
         },
     },
     plugins: [typography],

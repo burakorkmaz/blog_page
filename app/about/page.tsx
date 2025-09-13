@@ -1,4 +1,5 @@
 import {Github, Linkedin, Mail} from "lucide-react";
+import Link from "next/link";
 
 export default function AboutPage() {
     return (
@@ -10,17 +11,25 @@ export default function AboutPage() {
             <p className="text-lg text-textSecondary leading-relaxed mb-4">
                 Hi, I’m <span className="text-textPrimary font-semibold">Burak</span>.
                 This is my personal blog where I write about my thoughts, experiences,
-                and the projects I’m working on.
+                and the projects I’m working on and where I share my photos I have captured.
             </p>
 
             <p className="text-lg text-textSecondary leading-relaxed mb-4">
-                I enjoy exploring new technologies, building side projects, and sharing
-                what I’ve learned along the way. My goal is to make this blog a place
-                where I can document my journey and hopefully inspire or help others.
+                I enjoy exploring new technologies, building side projects, and sharing what
+                I’ve learned along the way through my blog posts. In addition to writing,
+                I also upload some of the photos I’ve taken, capturing moments and places
+                that inspire me. My goal is to make this site a space where I can share my
+                journey both in code and in life. You can also{" "}
+                <Link
+                    href="/gallery"
+                    className="text-accent hover:underline font-bold hover:text-textSecondary transition-colors"
+                >
+                    discover my photo gallery.
+                </Link>
             </p>
 
             <p className="text-lg text-textSecondary leading-relaxed mb-8">
-                Outside of coding, I love reading, traveling, and discovering new music.
+                Outside of coding, I love cooking and traveling.
             </p>
 
             <h1 className="text-4xl font-extrabold mb-6 text-textPrimary">
